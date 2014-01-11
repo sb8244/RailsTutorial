@@ -7,7 +7,6 @@ describe User do
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
-
   it { should be_valid }
 
   describe "when name is not present" do 
@@ -49,10 +48,17 @@ describe User do
   describe "when email is already taken" do
     before do
       user_with_same_email = @user.dup
+      user_with_same_email.email = @user.email.upcase
       user_with_same_email.save
     end
-
     it { should_not be_valid }
   end
 
+  describe "it should save with lowercase email" do
+    before { @user.email = @user.email.upcase }
+    it "should be lowercase" do
+      @user.save
+      expect(@user.email).to eq(@user.email.downcase)
+    end
+  end
 end
