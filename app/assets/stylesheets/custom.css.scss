@@ -1,0 +1,15 @@
+@import "bootstrap";
+
+.navbar-right {
+	padding-right: 15px;
+}
+
+#logo {
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
