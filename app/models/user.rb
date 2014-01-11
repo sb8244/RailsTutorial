@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
-  validates :name, presence: true
-  validates :email, :email_format => {:message => 'is not an email'}
+  validates :name, presence: true, length: { maximum: 50 }
+  validates :email, presence: true, :email_format => {:message => 'is not an email'},
+    uniqueness: true
 end
