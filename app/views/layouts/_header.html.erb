@@ -1,11 +1,11 @@
 <nav class='navbar navbar-inverse navbar-static-top' role='navigation'>
   <div class='navbar-header'>
-    <%= link_to 'sample app', '/', class: 'navbar-brand', id: 'logo' %>
+    <%= link_to 'sample app', root_path, class: 'navbar-brand', id: 'logo' %>
   </div>
   <ul class='nav navbar-nav navbar-right'>
-    <li><%= link_to 'Home', '#' %></li>
-    <li><%= link_to 'Help', '#' %></li>
-    <li><%= link_to 'Contact', '#' %></li>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Help', help_path %></li>
+    <li><%= link_to 'Contact', contact_path %></li>
     <li><%= link_to 'Sign In', '#' %></li>
   </ul>
 </nav>
